@@ -6,6 +6,9 @@ __pycache__/
 venv/
 .env
 
+_raw_data/
+_vector_store/
+
 vector_store/
 *.faiss
 *.pkl
