@@ -16,3 +16,4 @@ python-docx
 langchain_community
 sentence-transformers
 faiss-cpu
+azure-storage-blob
