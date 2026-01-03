@@ -6,9 +6,6 @@ __pycache__/
 venv/
 .env
 
-vector_store/
-*.faiss
-*.pkl
 
 Data/
 document_metadata.yaml
