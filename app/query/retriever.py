@@ -6,7 +6,7 @@ from typing import List, Tuple
 
 def retrieve_chunks(
     question: str,
-    vectorstore_path: str = "vector_store",
+    vectorstore_path: str = "_vector_store",
     top_k: int = 4,
     model_name: str = "sentence-transformers/all-MiniLM-L6-v2",
 ) -> List[Tuple[Document, float]]:
