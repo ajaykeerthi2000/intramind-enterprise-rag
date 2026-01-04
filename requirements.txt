@@ -1,19 +1,21 @@
-python-jose
-langchain_groq
-fastapi 
-uvicorn
-pydantic 
+# --- core backend ---
+fastapi==0.110.0
+uvicorn==0.29.0
+pydantic==2.6.4
 python-dotenv
-routes
 sqlalchemy
 PyYAML
-langchain
-langchain-community
-pathlib
-streamlit
-unstructured
-python-docx
-langchain_community
-sentence-transformers
-faiss-cpu
+python-jose
+
+# --- langchain ---
+langchain-core
+langchain-groq
+langchain-text-splitters
+
+# --- embeddings & vectors ---
+sentence-transformers==2.7.0
+torch==2.1.2
+faiss-cpu==1.7.4
+
+# --- azure ---
 azure-storage-blob
