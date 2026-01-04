@@ -11,6 +11,8 @@ python-jose
 langchain-core
 langchain-groq
 langchain-text-splitters
+langchain-community
+
 
 # --- embeddings & vectors ---
 sentence-transformers==2.7.0
