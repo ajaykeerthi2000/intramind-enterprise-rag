@@ -3,10 +3,16 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 from typing import List, Tuple
 
+import os
+from pathlib import Path
+
+VECTOR_STORE_PATH = Path(
+    os.getenv("VECTOR_STORE_PATH", "./_vector_store")
+)
 
 def retrieve_chunks(
     question: str,
-    vectorstore_path: str = "_vector_store",
+    vectorstore_path:Path = VECTOR_STORE_PATH,
     top_k: int = 4,
     model_name: str = "sentence-transformers/all-MiniLM-L6-v2",
 ) -> List[Tuple[Document, float]]:
