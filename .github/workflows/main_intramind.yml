@@ -1,4 +1,4 @@
-name: Deploy IntraMind to Azure Web App
+name: Build and deploy Python app to Azure Web App - intramind
 
 on:
   push:
@@ -9,17 +9,19 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Azure Login (OIDC)
+      - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_116440F86BAF4519A8E431932A056C29 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6799E43A532D4615900F095393279A84 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4F574929639B4030A3ED75CFD3CFB59B }}
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
