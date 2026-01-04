@@ -1,14 +1,22 @@
-fastapi==0.110.0
-uvicorn==0.29.0
-pydantic==2.6.4
-
-sqlalchemy==2.0.34
-
-langchain-core==0.1.52
-langchain-community==0.0.38
-langchain-text-splitters==0.3.7
-
+# --- core backend ---
+fastapi
+uvicorn
+pydantic
 python-dotenv
+sqlalchemy
 PyYAML
 python-jose
+
+# --- langchain ---
+langchain-core
+langchain-groq
+langchain-text-splitters
+langchain-community
+
+# --- embeddings & vectors ---
+sentence-transformers
+torch
+faiss-cpu
+
+# --- azure ---
 azure-storage-blob
